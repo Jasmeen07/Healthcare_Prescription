@@ -4,7 +4,7 @@
   "description": "Healthcare Prescription Interaction Checker — UCS310 DBMS Project",
   "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "node start.js",
     "init-db": "node backend/init-db.js"
   },
   "dependencies": {

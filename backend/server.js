@@ -17,12 +17,14 @@ app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
 // ─── EDIT THESE TO MATCH YOUR MySQL SETUP ────────────────────────────────────
 const DB_CONFIG = {
-  host:     'localhost',
-  user:     'root',           // your MySQL username
-  password: '1234',               // your MySQL password
-  database: 'healthcare_db',
+  host:     process.env.MYSQLHOST     || 'localhost',
+  user:     process.env.MYSQLUSER     || 'root',
+  password: process.env.MYSQLPASSWORD || '1234',
+  database: process.env.MYSQLDATABASE || 'healthcare_db',
+  port:     process.env.MYSQLPORT     || 3306,
   waitForConnections: true,
   connectionLimit:    10,
+  ssl: process.env.MYSQLHOST ? { rejectUnauthorized: false } : false,
 };
 // ─────────────────────────────────────────────────────────────────────────────
 

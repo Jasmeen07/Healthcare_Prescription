@@ -1,7 +1,7 @@
 // frontend/js/api.js
 // Centralised API calls — all routes match backend/server.js
 
-const API_BASE = 'https://healthcareprescription-production-4ac9.up.railway.app/api';
+const API_BASE = '/api';
 
 const api = {
   // ── Patients ─────────────────────────────────────────────────────────────────
