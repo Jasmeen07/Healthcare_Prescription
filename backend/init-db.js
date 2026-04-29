@@ -18,7 +18,7 @@ const DB_CONFIG = {
   database: process.env.MYSQLDATABASE || 'healthcare_db',
   port:     process.env.MYSQLPORT     || 3306,
   multipleStatements: true,
-  ssl: process.env.MYSQLHOST ? { rejectUnauthorized: false } : false,
+  ssl: process.env.MYSQLHOST ? { rejectUnauthorized: false } : false,};
 // ─────────────────────────────────────────────────────────────────────────────
 
 async function main() {
